@@ -32,6 +32,6 @@
         "service_worker": "background.js"
     },
     "host_permissions": [
-        "*://*.localhost:3000/"
+        "http://localhost:3000"
       ]
 }
