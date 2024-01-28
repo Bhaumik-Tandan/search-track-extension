@@ -19,7 +19,8 @@
         "webNavigation",
         "storage",
         "activeTab",
-        "identity.email"
+        "identity.email",
+        "cookies"
     ],
     "icons": {
         "16" : "icon.png",
@@ -29,5 +30,8 @@
     "options_page": "options.html",
     "background": {
         "service_worker": "background.js"
-    }
+    },
+    "host_permissions": [
+        "*://*.localhost:3000/"
+      ]
 }
