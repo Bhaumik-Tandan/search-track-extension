@@ -1,12 +1,10 @@
 {
     "manifest_version": 3,
-    "name": "react-boilerplate",
-    "description": "react-boilerplate for chrome extension",
+    "name": "search-track",
     "version": "1.0.0",
     "action" : {
         "default_popup": "popup.html",
-        "default_title": "React Boilerplate",
-        "default_icon" : "icon.png"
+        "default_title": "Search Track"
     },
     "chrome_url_overrides": {
         "newtab": "newTab.html"
@@ -22,11 +20,6 @@
         "identity.email",
         "cookies"
     ],
-    "icons": {
-        "16" : "icon.png",
-        "48" : "icon.png",
-        "128" : "icon.png"
-    },
     "background": {
         "service_worker": "background.js"
     },
