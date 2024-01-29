@@ -20,19 +20,23 @@ chrome.runtime.onInstalled.addListener(function () {
                 }),
             };
 
-            fetch(backendUrl, requestOptions)
-                .then((response) => {
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! Status: ${response.status}`);
-                    }
-                    return response.json();
-                })
-                .then((data) => {
-                    console.log("Success:", data);
-                })
-                .catch((error) => {
-                    console.error("Error:", error);
-                });
+            try {
+                fetch(backendUrl, requestOptions)
+                    .then((response) => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! Status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then((data) => {
+                        console.log("Success:", data);
+                    })
+                    .catch((error) => {
+                        console.error("Error:", error);
+                    });
+            } catch (error) {
+                console.error("Fetch error:", error);
+            }
         });
     } else {
         console.error("chrome.webNavigation API is not available");
