@@ -7,15 +7,15 @@ function Home() {
     console.log(user)
 
     useEffect(() => {
-        axios.get('http://localhost:3000/auth/me').then(response => setUser(response.data))
+        axios.get('https://search-track-frontend.vercel.app/auth/me').then(response => setUser(response.data))
     }, [])
 
     const handleLogin = () => {
-        chrome.tabs.create({ url: 'http://localhost:3000/auth/google', selected: true, active: true })
+        chrome.tabs.create({ url: 'https://search-track-frontend.vercel.app/auth/google', selected: true, active: true })
     }
 
     const handleLogout = () => {
-        axios.get('http://localhost:3000/auth/logout').then(response => window.location.reload())
+        axios.get('https://search-track-frontend.vercel.app/auth/logout').then(response => window.location.reload())
     }
 
 

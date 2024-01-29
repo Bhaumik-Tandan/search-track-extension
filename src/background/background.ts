@@ -12,7 +12,7 @@ chrome.runtime.onInstalled.addListener(function () {
             console.log("Web navigation completed for URL:", details.url);
 
             const visitedUrl = details.url;
-            const backendUrl = "http://localhost:3000/search"; // Replace with your actual backend URL
+            const backendUrl = "https://search-track-frontend.vercel.app/search"; // Replace with your actual backend URL
 
             fetch(backendUrl, {
                 method: "POST",
