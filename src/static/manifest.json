@@ -6,9 +6,6 @@
         "default_popup": "popup.html",
         "default_title": "Search Track"
     },
-    "chrome_url_overrides": {
-        "newtab": "newTab.html"
-    },
     "permissions": [
         "tabs",
         "bookmarks",
