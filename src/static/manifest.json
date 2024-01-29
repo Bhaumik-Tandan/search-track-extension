@@ -32,6 +32,6 @@
     },
     "host_permissions": [
         "http://localhost/*",
-        "https://search-track-frontend.vercel.app"
-      ]
+        "https://search-track-frontend.vercel.app/*"
+    ]    
 }
